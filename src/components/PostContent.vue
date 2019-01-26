@@ -30,10 +30,10 @@
     </div>
     <Modal :open="imageOpen" :handleClose="handleClose">
       <video v-if="post.ext === '.webm'" :width="post.w" controls>
-        <source :src="`http://i.4cdn.org/${board}/${post.tim}${post.ext}`" type="video/webm">
+        <source :src="`https://i.4cdn.org/${board}/${post.tim}${post.ext}`" type="video/webm">
         Your browser does not support HTML5 video.
       </video>
-      <img v-else :src="`http://i.4cdn.org/${board}/${post.tim}${post.ext}`" />
+      <img v-else :src="`https://i.4cdn.org/${board}/${post.tim}${post.ext}`" />
     </Modal>
   </div>
 </template>
