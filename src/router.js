@@ -1,6 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Boards from './views/Boards.vue';
+import Board from './views/Board.vue';
+import Thread from './views/Thread.vue';
 
 Vue.use(Router)
 
@@ -10,16 +12,23 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'boards',
+      component: Boards
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/board',
+      name: 'board',
+      component: Board,
+      props: route => ({ board: route.query.b})
+    },
+    {
+      path: '/thread',
+      name: 'thread',
+      component: Thread,
+      props: route => ({ board: route.query.b, threadNumber: route.query.t.toString()})
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
