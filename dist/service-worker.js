@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.0efa36506b7114cd129d9b34aed3a51e.js"
+  "/precache-manifest.83ce34311854ef7f91c73ca683f466bf.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "anon-web"});
