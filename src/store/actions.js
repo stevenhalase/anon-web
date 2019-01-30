@@ -46,6 +46,7 @@ export default {
         .then((response) => {
           commit('SET_CURRENT_BOARD', { board, threads: response.data.threads });
           localStorage.setItem('anon_profile', JSON.stringify(state.profile));
+          resolve();
         })
         .catch((error) => {
           console.log(error);
@@ -67,6 +68,7 @@ export default {
           commit('SET_CURRENT_THREAD', thread);
           commit('ADD_OPEN_THREAD', threadLink);
           localStorage.setItem('anon_profile', JSON.stringify(state.profile));
+          resolve();
         })
         .catch((error) => {
           console.log(error);
