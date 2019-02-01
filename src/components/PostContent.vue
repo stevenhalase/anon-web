@@ -171,6 +171,7 @@ export default {
     .post-sub {
       font-weight: bold;
       margin-bottom: 10px;
+      word-break: break-word;
     }
 
     .post-comment {
@@ -178,6 +179,7 @@ export default {
       overflow: hidden;
       position: relative;
       transition: max-height 0.5s ease-in-out;
+      word-break: break-word;
     }
 
     &.expand {

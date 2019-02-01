@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const API = {
-  BASE: 'http://desktop-pei2o18:3000/api/v1/',
-  // BASE: 'https://anon-api.herokuapp.com/api/v1/',
+  // BASE: 'http://desktop-pei2o18:3000/api/v1/',
+  BASE: 'https://anon-api.herokuapp.com/api/v1/',
   ROUTES: {
     BOARD: 'board',
     THREAD: 'thread',
