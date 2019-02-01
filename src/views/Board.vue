@@ -88,9 +88,11 @@ export default {
       background-color: #F5F5F5;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
+      pointer-events: none;
 
       &.show {
         opacity: 1;
+        pointer-events: all;
       }
 
       .post-loader {

@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 const API = {
-  // BASE: 'http://desktop-pei2o18:3000/api/v1/',
-  BASE: 'https://anon-api.herokuapp.com/api/v1/',
+  BASE: 'http://desktop-pei2o18:3000/api/v1/',
+  // BASE: 'https://anon-api.herokuapp.com/api/v1/',
   ROUTES: {
     BOARD: 'board',
-    THREAD: 'thread'
+    THREAD: 'thread',
+    IMAGE: 'image'
   }
 };
 
@@ -25,7 +26,6 @@ export default {
     return new Promise((resolve, reject) => {
       axios.get(`${API.BASE}${API.ROUTES.BOARD}`)
         .then((response) => {
-          console.log(response);
           commit('SET_BOARDS', response.data.boards);
           resolve(response.data.boards);
         })
@@ -69,6 +69,22 @@ export default {
           commit('ADD_OPEN_THREAD', threadLink);
           localStorage.setItem('anon_profile', JSON.stringify(state.profile));
           resolve();
+        })
+        .catch((error) => {
+          console.log(error);
+          reject(error);
+        })
+        .finally(() => {
+          commit('SET_LOADING', false);
+        });
+    });
+  },
+  GET_IMAGE({ commit, state }, payload) {
+    return new Promise((resolve, reject) => {
+      axios.get(`${API.BASE}${API.ROUTES.IMAGE}?imageAddress=${payload}`)
+        .then((response) => {
+          console.log(response);
+          resolve(response.data);
         })
         .catch((error) => {
           console.log(error);
