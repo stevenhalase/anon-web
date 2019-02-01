@@ -8,7 +8,7 @@
         class="post-country" />
       <span
         v-if="post.name"
-        class="chip">{{ post.name }}</span>
+        class="chip">{{ `${post.name.substring(0, 9)}${post.name.length > 10 ? '...' : ''}` }}</span>
       <span
         v-if="post.id"
         class="chip">{{ post.id }}</span>
