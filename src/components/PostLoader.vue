@@ -32,7 +32,7 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 
     .chip {
       width: 75px;
@@ -46,7 +46,7 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     padding: 15px;
 
     .img {
@@ -63,14 +63,14 @@ export default {
 
   .post-loader-footer {
     height: 25px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 }
 
 .shimmer {
 	background: linear-gradient(270deg, #e2e3e3, #dcdddd);
   background-size: 400% 400%;
-	animation: shimmer 1s ease infinite;
+	animation: shimmer 0.5s ease infinite;
 }
 
 @keyframes shimmer { 

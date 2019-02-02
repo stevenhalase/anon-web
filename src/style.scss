@@ -18,6 +18,11 @@ body {
   color: #789922;
 }
 
+.quotelink,
+.board-link {
+  color: #3498db;
+}
+
 .chip {
   width: fit-content;
   display: flex;
@@ -59,7 +64,7 @@ body {
   }
 
   &.dark {
-    background-color: #454f5e;
+    background-color: #1E2429;
 
     &:hover {
       background-color: #2f3640;
@@ -85,6 +90,10 @@ body {
   &.block {
     width: fit-content;
     border-radius: 4px;
+  }
+
+  &.full {
+    width: 100%;
   }
 
   &.selected {

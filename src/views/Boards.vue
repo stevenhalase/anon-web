@@ -69,7 +69,7 @@ export default {
     .board-list-header {
       display: flex;
       padding: 10px 0;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .board-list-actions {
@@ -113,7 +113,7 @@ export default {
       display: flex;
       flex-direction: column;
       padding: 10px 0;
-      border-top: 1px solid #eee;
+      border-top: 1px solid rgba(0,0,0,0.05);
 
       .board {
         padding: 10px 0;

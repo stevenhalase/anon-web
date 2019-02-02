@@ -33,11 +33,11 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 50px);
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.8);
   pointer-events: none;
   z-index: 100;
 

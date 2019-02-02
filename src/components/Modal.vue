@@ -24,7 +24,7 @@ export default {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 50px);
   padding: 25px;
   z-index: 100;
   
@@ -41,17 +41,13 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // max-width: calc(100vw - 100px);
-    // max-height: calc(100vh - 100px);
-    // width: 100%;
-    // height: 100%;
     z-index: 101;
 
     & > * {
       width: 100%;
+      max-width: 75vw;
       height: 100%;
-      max-width: calc(100vw - 100px);
-      max-height: calc(100vh - 100px);
+      max-height: 75vh;
     }
   }
 
@@ -60,7 +56,7 @@ export default {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 50px);
     background-color: rgba(0,0,0,0.8);
     z-index: 100;
   }

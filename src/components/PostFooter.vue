@@ -45,7 +45,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(0,0,0,0.2);
 
   .post-footer-left {
     display: flex;

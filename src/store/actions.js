@@ -21,6 +21,10 @@ export default {
     commit('SET_FAVORITE_BOARDS', payload);
     localStorage.setItem('anon_profile', JSON.stringify(state.profile));
   },
+  SET_THEME({ commit, state }, payload) {
+    commit('SET_THEME', payload);
+    localStorage.setItem('anon_profile', JSON.stringify(state.profile));
+  },
   GET_BOARDS({ commit, state }) {
     commit('SET_LOADING', true);
     return new Promise((resolve, reject) => {
