@@ -1,26 +1,29 @@
 <template>
   <div class="bottom-navigation">
     <div class="navigation-bar">
-      <button
-        @click="back"
-        class="menu-btn">
-        <font-awesome-icon :icon="['far', 'arrow-alt-circle-left']" class="menu-icon"/>
-      </button>
-      <button
-        @click="goToBoards({ name: 'boards' })"
-        class="menu-btn">
-        <font-awesome-icon :icon="['far', 'star']" class="menu-icon"/>
-      </button>
-      <button
-        @click="openBoards"
-        class="menu-btn">
-        <font-awesome-icon :icon="['fas', 'list']" class="menu-icon"/>
-      </button>
-      <button
-        @click="openSettings"
-        class="menu-btn">
-        <font-awesome-icon :icon="['fas', 'ellipsis-v']" class="menu-icon"/>
-      </button>
+      <img src="../assets/black-circle-logo.png" class="logo" />
+      <div class="actions">
+        <button
+          @click="back"
+          class="menu-btn">
+          <font-awesome-icon :icon="['far', 'arrow-alt-circle-left']" class="menu-icon"/>
+        </button>
+        <button
+          @click="goToBoards({ name: 'boards' })"
+          class="menu-btn">
+          <font-awesome-icon :icon="['far', 'star']" class="menu-icon"/>
+        </button>
+        <button
+          @click="openBoards"
+          class="menu-btn">
+          <font-awesome-icon :icon="['fas', 'list']" class="menu-icon"/>
+        </button>
+        <button
+          @click="openSettings"
+          class="menu-btn">
+          <font-awesome-icon :icon="['fas', 'ellipsis-v']" class="menu-icon"/>
+        </button>
+      </div>
     </div>
     <div 
       class="navigation-content-pane"
@@ -185,11 +188,19 @@ export default {
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     background-color: #2f3640;
-    padding-right: 15px;
+    padding: 0 15px;
     z-index: 10;
+
+    .actions {
+      display: flex;
+    }
+
+    .logo {
+      width: 32px;
+    }
   }
 
   .navigation-content-pane {
