@@ -17,6 +17,16 @@ export default {
       commit('SET_PROFILE', profile);
     }
   },
+  CLEAR_PROFILE({ commit, state }) {
+    localStorage.removeItem('anon_profile');
+    commit('SET_PROFILE', {
+      theme: 'light',
+      favoriteBoards: [],
+      openThreads: [],
+      currentBoard: null,
+      currentThread: null
+    });
+  },
   SET_FAVORITE_BOARDS({ commit, state }, payload) {
     commit('SET_FAVORITE_BOARDS', payload);
     localStorage.setItem('anon_profile', JSON.stringify(state.profile));

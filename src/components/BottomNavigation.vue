@@ -78,6 +78,15 @@
             </button>
           </div>
         </div>
+        <div class="menu-section">
+          <div class="menu-setting">
+            <button
+              @click="clearProfile"
+              class="menu-btn block full">
+              <span>Clear Profile</span>
+            </button>
+          </div>
+        </div>
       </template>
     </div>
   </div>
@@ -157,6 +166,10 @@ export default {
     },
     setTheme(selection) {
       this.$store.dispatch('SET_THEME', selection );
+    },
+    clearProfile(selection) {
+      this.$store.dispatch('CLEAR_PROFILE', selection );
+      this.goToBoards({ name: 'boards' });
     }
   }
 }
